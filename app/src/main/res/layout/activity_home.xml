@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sblayout"
+            app:cardCornerRadius="10dp"
+            android:padding="5dp">
+
+            <EditText
+                android:layout_marginHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/search"
+                android:drawableLeft="@drawable/search"
+                android:drawableTint="#fff"
+                android:inputType="textWebEditText"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="#fff"
+                android:drawablePadding="5dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    <ListView
+        android:layout_below="@id/sblayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/songView"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+            app:navigationIcon="@drawable/ic_baseline_menu_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_baseline_music_note_24"
+            app:layout_anchor="@id/bar"
+            />
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
