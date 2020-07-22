@@ -1,49 +1,17 @@
-package com.example.museon.models
 
-class SongsModel {
-        var aPath: String? = null
-        var aName: String? = null
-        var aAlbum: String? = null
-        var aArtist: String? = null
-        var length: Long? = 0
+package com.internshala.echo
 
-        fun getalength(): Long? {
-            return length
-        }
+import android.annotation.SuppressLint
+import android.os.Parcel
+import android.os.Parcelable
 
-        fun setalength(aPath: Long?) {
-            this.length = length
-        }
-
-        fun getaPath(): String? {
-            return aPath
-        }
-
-        fun setaPath(aPath: String?) {
-            this.aPath = aPath
-        }
-
-        fun getaName(): String? {
-            return aName
-        }
-
-        fun setaName(aName: String?) {
-            this.aName = aName
-        }
-
-        fun getaAlbum(): String? {
-            return aAlbum
-        }
-
-        fun setaAlbum(aAlbum: String?) {
-            this.aAlbum = aAlbum
-        }
-
-        fun getaArtist(): String? {
-            return aArtist
-        }
-
-        fun setaArtist(aArtist: String?) {
-            this.aArtist = aArtist
-        }
+@SuppressLint("ParcelCreator")
+class SongsModel(var songID: Long, var songTitle: String, var artist: String,
+            var songData: String, var dateAdded: Long) : Parcelable {
+    override fun writeToParcel(p0: Parcel?, p1: Int) {
     }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+}
